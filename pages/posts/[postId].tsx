@@ -8,6 +8,9 @@ type IPost = {
 
 const PostDetails = ({ post }: IPost) => {
   const router = useRouter();
+
+  //  when a path not renderd at buid time is accessed, and fallback in getStaticPath is set to true, this is first displayed before the page is generated
+
   if (router.isFallback) {
     return <h2>Loading ...</h2>;
   }
@@ -41,7 +44,7 @@ export async function getStaticPaths() {
   });
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -51,5 +54,7 @@ export async function getStaticProps({ params }: any) {
   );
   const post = await res.json();
 
-  return { props: { post } };
+  // revalidate key specifies how long (seconds) before a page re-generation occurs
+
+  return { props: { post }, revalidate: 10 };
 }
