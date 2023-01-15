@@ -10,6 +10,9 @@ const Home = () => {
       <div>
         <Link href="/posts">posts</Link>
       </div>
+      <div>
+        <Link href="/albums">albums</Link>
+      </div>
     </>
   );
 };
