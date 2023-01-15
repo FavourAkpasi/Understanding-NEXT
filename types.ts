@@ -42,3 +42,13 @@ export type Post = {
   title: string;
   body: string;
 };
+
+export type Albums = {
+  albums: Album[];
+};
+
+export interface Album {
+  userId: number;
+  id: number;
+  title: string;
+}
