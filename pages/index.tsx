@@ -13,6 +13,9 @@ const Home = () => {
       <div>
         <Link href="/albums">albums</Link>
       </div>
+      <div>
+        <Link href="/comments">comments</Link>
+      </div>
     </>
   );
 };
