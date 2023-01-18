@@ -16,6 +16,9 @@ const Home = () => {
       <div>
         <Link href="/comments">comments</Link>
       </div>
+      <div>
+        <Link href="/calender">calender</Link>
+      </div>
     </>
   );
 };
