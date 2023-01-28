@@ -9,6 +9,23 @@ const AppCalender = (events: any) => {
       initialView="dayGridMonth"
       weekends={true}
       events={events}
+      dayHeaderFormat={{ weekday: "long" }}
+      headerToolbar={{
+        start: "title prev next",
+        center: "",
+        end: "Home Lab",
+      }}
+      customButtons={{
+        Home: {
+          text: "Home",
+        },
+        Lab: {
+          text: "Lab",
+          // click: function () {
+          //   alert("clicked custom button 2!");
+          // },
+        },
+      }}
     />
   );
 };
