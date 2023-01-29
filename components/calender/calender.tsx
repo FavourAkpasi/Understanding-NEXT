@@ -1,17 +1,24 @@
 import React from "react";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
+import timeGridPlugin from "@fullcalendar/timegrid";
 
 const AppCalender = (events: any) => {
   return (
     <FullCalendar
-      plugins={[dayGridPlugin]}
+      plugins={[dayGridPlugin, timeGridPlugin]}
       initialView="dayGridMonth"
       weekends={true}
-      events={events}
       dayHeaderFormat={{ weekday: "long" }}
+      events={events}
+      eventTimeFormat={{
+        hour: "2-digit",
+        minute: "2-digit",
+        meridiem: true,
+      }}
+      views={{ dayGrid: { displayEventEnd: true } }}
       headerToolbar={{
-        start: "title prev next",
+        start: "title prev next dayGridMonth,timeGridWeek,timeGridDay",
         center: "",
         end: "Home Lab",
       }}
@@ -26,6 +33,8 @@ const AppCalender = (events: any) => {
           // },
         },
       }}
+      contentHeight="auto"
+      aspectRatio={2}
     />
   );
 };
