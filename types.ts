@@ -64,3 +64,11 @@ export interface Comment {
 export type Comments = {
   comments: Comment[];
 };
+
+export interface Event {
+  title: String;
+  start: String;
+  end: String;
+  allDay: Boolean;
+  classNames: string;
+}

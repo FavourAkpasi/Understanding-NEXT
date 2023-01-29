@@ -288,7 +288,7 @@
   dependencies:
     preact "^10.0.5"
 
-"@fullcalendar/daygrid@^6.0.3":
+"@fullcalendar/daygrid@^6.0.3", "@fullcalendar/daygrid@~6.0.3":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.0.3.tgz#e4abf955b6308e6823b65722558c0669aebe5388"
   integrity sha512-JWWwWRsi1dgTlbXSbqjmBjd9SRN6wuXOvOwcuvW5sZtk77vtuD5DKcqoitOREq4e2P/f2WdMV6812AVSAPRODw==
@@ -302,6 +302,13 @@
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-6.0.4.tgz#6ba8e52a07d261b0fa24620e184ec3c1485ae05b"
   integrity sha512-TpEGOWWZtD3whXPf8XCXGGPhQusKo/egRb1GUC1oH0Zb1zFagRXGTYPcn2acMatHIk5ZxuF/2NMiF5Iz6gEYcw==
+
+"@fullcalendar/timegrid@^6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-6.0.3.tgz#abc60b125e436e7bb0b1cfcb9cdd735b34c034d6"
+  integrity sha512-BCuHQLs5UPfGvGjRO6eYSwxbaFXSprcjFWDHwGsBptd5RItXeDDHgqC8U8qYKEwVwt0DM3RCb55VtlzQLo3CdA==
+  dependencies:
+    "@fullcalendar/daygrid" "~6.0.3"
 
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
